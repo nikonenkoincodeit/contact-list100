@@ -14,3 +14,12 @@ export function saveData(data) {
     return response.json();
   });
 }
+
+export function getData() {
+  return fetch(BASE_URL).then((resp) => {
+    if (!resp.ok) {
+      throw new Error(resp.statusText || resp.status);
+    }
+    return resp.json();
+  });
+}
