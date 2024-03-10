@@ -1,5 +1,5 @@
 import { formEl, contactEl } from "./refs";
-import { saveData, getData, deleteData } from "./api";
+import { saveData, getData, deleteData, updateData } from "./api";
 import { createCard } from "./markup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
@@ -51,11 +51,24 @@ contactEl.addEventListener("click", deleteCard);
 async function deleteCard(event) {
   try {
     if (!event.target.classList.contains("btn-close")) return;
-    const card = event.target.closest(".js-wrap-card")
-    const id = card.dataset.cardid
-    await deleteData(id)
-    card.remove()
+    const card = event.target.closest(".js-wrap-card");
+    const id = card.dataset.cardid;
+    await deleteData(id);
+    card.remove();
   } catch (err) {
-    console.log(err)
+    console.log(err);
+  }
+}
+
+contactEl.addEventListener("input", updateName);
+
+async function updateName(event) {
+  try {
+    const text = event.target.textContent;
+    const card = event.target.closest(".js-wrap-card");
+    const id = card.dataset.cardid;
+    await updateData(id, { name: text });
+  } catch (error) {
+    console.log(error);
   }
 }

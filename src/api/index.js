@@ -26,12 +26,26 @@ export function getData() {
 
 export function deleteData(id) {
   return fetch(BASE_URL + id, {
-    method: "DELETE"
-  })
-    .then(resp => {
-      if (!resp.ok) {
-        throw new Error(resp.status)
-      }
-      return resp.json()
-  })
+    method: "DELETE",
+  }).then((resp) => {
+    if (!resp.ok) {
+      throw new Error(resp.status);
+    }
+    return resp.json();
+  });
+}
+
+export function updateData(id, data) {
+  return fetch(BASE_URL + id, {
+    method: "PATCH",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((resp) => {
+    if (!resp.ok) {
+      throw new Error(resp.status);
+    }
+    return resp.json();
+  });
 }
