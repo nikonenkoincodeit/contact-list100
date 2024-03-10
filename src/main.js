@@ -1,5 +1,5 @@
 import { formEl, contactEl } from "./refs";
-import { saveData, getData } from "./api";
+import { saveData, getData, deleteData } from "./api";
 import { createCard } from "./markup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
@@ -45,8 +45,17 @@ function addMarkup(murkup) {
 }
 
 init();
+
 contactEl.addEventListener("click", deleteCard);
-function deleteCard(event) {
-  if (!event.target.classList.contains("btn-close")) return;
-  console.log("123");
+
+async function deleteCard(event) {
+  try {
+    if (!event.target.classList.contains("btn-close")) return;
+    const card = event.target.closest(".js-wrap-card")
+    const id = card.dataset.cardid
+    await deleteData(id)
+    card.remove()
+  } catch (err) {
+    console.log(err)
+  }
 }

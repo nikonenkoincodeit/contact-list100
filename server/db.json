@@ -1,40 +1,6 @@
 {
   "contacts": [
     {
-      "name": "Igor",
-      "number": "+3805656545888",
-      "email": "pavel@gmail.com",
-      "createdAt": 1676193108450,
-      "id": "EyqPlfj"
-    },
-    {
-      "name": "GLC-Coupe",
-      "number": "+38066543456456",
-      "email": "dasd@gmail.copm",
-      "createdAt": 1679738851899,
-      "id": "xJKz7U3"
-    },
-    {
-      "name": "vue",
-      "number": "60700.00",
-      "email": "alexandra.kravtsova@goit.ua",
-      "createdAt": 1698566966311,
-      "id": "uuQVNis"
-    },
-    {
-      "name": "qaaaa",
-      "number": "1",
-      "email": "a@a",
-      "id": "Tn_O08d"
-    },
-    {
-      "name": "Nataliia",
-      "number": "03030303030",
-      "email": "filinanatash@ukr.net",
-      "createdAt": 1698570970861,
-      "id": "HtrFkjC"
-    },
-    {
       "name": "Nataliia",
       "number": "021021",
       "email": "filinanatash@gmail.com",
@@ -94,13 +60,6 @@
       "email": "shadim11@mail.ru",
       "createAt": 1710063593090,
       "id": "w_0L9d-"
-    },
-    {
-      "name": "Hello",
-      "number": "12121212",
-      "email": "shadim11@mail.ru",
-      "createdAt": 1710063651121,
-      "id": "eZCFW0m"
     }
   ]
 }
