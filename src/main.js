@@ -45,3 +45,8 @@ function addMarkup(murkup) {
 }
 
 init();
+contactEl.addEventListener("click", deleteCard);
+function deleteCard(event) {
+  if (!event.target.classList.contains("btn-close")) return;
+  console.log("123");
+}
